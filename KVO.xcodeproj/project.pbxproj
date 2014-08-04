@@ -12,6 +12,8 @@
 		1B94C868198EE772005847A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B94C866198EE772005847A9 /* Main.storyboard */; };
 		1B94C86A198EE772005847A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B94C869198EE772005847A9 /* Images.xcassets */; };
 		1B94C876198EE772005847A9 /* KVOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B94C875198EE772005847A9 /* KVOTests.swift */; };
+		1B94C882198EE87E005847A9 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B94C881198EE87E005847A9 /* ViewModel.swift */; };
+		1B94C886198EF5B8005847A9 /* NSObject+MVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B94C885198EF5B8005847A9 /* NSObject+MVVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 		1B94C86F198EE772005847A9 /* KVOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KVOTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B94C874198EE772005847A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B94C875198EE772005847A9 /* KVOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVOTests.swift; sourceTree = "<group>"; };
+		1B94C881198EE87E005847A9 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		1B94C885198EF5B8005847A9 /* NSObject+MVVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+MVVM.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 			children = (
 				1B94C862198EE772005847A9 /* AppDelegate.swift */,
 				1B94C864198EE772005847A9 /* ViewController.swift */,
+				1B94C881198EE87E005847A9 /* ViewModel.swift */,
+				1B94C885198EF5B8005847A9 /* NSObject+MVVM.swift */,
 				1B94C866198EE772005847A9 /* Main.storyboard */,
 				1B94C869198EE772005847A9 /* Images.xcassets */,
 				1B94C860198EE772005847A9 /* Supporting Files */,
@@ -210,6 +216,8 @@
 			files = (
 				1B94C865198EE772005847A9 /* ViewController.swift in Sources */,
 				1B94C863198EE772005847A9 /* AppDelegate.swift in Sources */,
+				1B94C882198EE87E005847A9 /* ViewModel.swift in Sources */,
+				1B94C886198EF5B8005847A9 /* NSObject+MVVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +405,7 @@
 				1B94C87B198EE772005847A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1B94C87C198EE772005847A9 /* Build configuration list for PBXNativeTarget "KVOTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +414,7 @@
 				1B94C87E198EE772005847A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
