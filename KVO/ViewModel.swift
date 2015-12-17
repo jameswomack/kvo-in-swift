@@ -9,30 +9,30 @@
 import Foundation
 
 func remove(needle: String!, haystack: String!) ->String {
-  return needle.stringByReplacingOccurrencesOfString(haystack, withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+    return needle.stringByReplacingOccurrencesOfString(haystack, withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
 }
 
 let SUFFIX : String = "TextView.text"
 
 class ViewModel : NSObject {
-  var foo: NSString = "fooString"
-  var input: NSString = "inputString"
-  
-  init(view: ViewController) {
-    super.init()
-    for key in ["foo","input"] {
-      self.addObserver(view, forKeyPath: key)
-      view.addObserver(self, forKeyPath: key + SUFFIX)
+    var foo: NSString = "fooString"
+    var input: NSString = "inputString"
+    
+    init(view: ViewController) {
+        super.init()
+        for key in ["foo","input"] {
+            self.addObserver(view, forKeyPath: key)
+            view.addObserver(self, forKeyPath: key + SUFFIX)
+        }
     }
-  }
-  
-  override func observeValueForKeyPath(keyPath: String!, ofObject object: AnyObject!, change: NSDictionary!, context: CMutableVoidPointer) {
-    var view = object as ViewController
-    var string = view[keyPath] as NSString
-    var modelKeyPath = remove(keyPath, SUFFIX)
-    if(self[modelKeyPath] != string) {
-      self[modelKeyPath] = string
-      println(string)
+    
+    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+        let view = object as! ViewController
+        let string = view[keyPath!] as! NSString
+        let modelKeyPath = remove(keyPath, haystack: SUFFIX)
+        if(self[modelKeyPath] != string) {
+            self[modelKeyPath] = string
+            print(string)
+        }
     }
-  }
 }
