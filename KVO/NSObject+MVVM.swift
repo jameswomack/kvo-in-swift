@@ -24,7 +24,7 @@ extension NSObject {
     return true
   }
   func addObserver(observer: NSObject!, forKeyPath keyPath: String!) {
-    self.addObserver(observer, forKeyPath: keyPath, options: nil, context: nil)
+    self.addObserver(observer, forKeyPath: keyPath, options: [], context: nil)
   }
 }
 
